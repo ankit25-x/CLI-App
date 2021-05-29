@@ -55,17 +55,19 @@ for(var i=0; i<questions.length; i++)
 
 console.log("Thanks for playing...");
 
+var alpha = scoreboard[0];
 for(var k=0;k<scoreboard.length;k++){
-  if(score>scoreboard[k].points){
-    console.log("WOW! NEW HIGH SCORE....please send screenshot of score to update");
-    break;
+  if(scoreboard[k].points>alpha){
+    alpha=scoreboard[k];
   }
 }
 
-console.log("check out the list of highscores...")
-for(var j=0;j<scoreboard.length;j++)
-{
-  console.log(scoreboard[j].name,"-" ,scoreboard[j].points );
-  
+if(score>alpha){
+  console.log("WOW! NEW HIGH SCORE....please send screenshot of score to update");
+}
+else{
+  console.log("You can do better....Try again!")
 }
 
+console.log("check out the list of highscores...")
+console.table(scoreboard);
