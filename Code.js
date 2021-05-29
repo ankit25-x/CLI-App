@@ -5,13 +5,13 @@ var userName = readlineSync.question("Your name ? ");
 console.log("Welcome", userName, "to DO YOU KNOW Ankit");
 
 //highscorelist
-var scoreboard=[{
+var scoreBoard=[{
   name: "Ankit",
   points: 3,
 },
 {
   name: "Manmita",
-  points: 3,
+  points: 2,
  },
 ]
 //function
@@ -55,10 +55,10 @@ for(var i=0; i<questions.length; i++)
 
 console.log("Thanks for playing...");
 
-var alpha = scoreboard[0];
-for(var k=0;k<scoreboard.length;k++){
-  if(scoreboard[k].points>alpha){
-    alpha=scoreboard[k];
+var alpha = scoreBoard[0].points;
+for(var k=0;k<scoreBoard.length;k++){
+  if(scoreBoard[k].points>alpha){
+    alpha=scoreBoard[k];
   }
 }
 
@@ -70,4 +70,4 @@ else{
 }
 
 console.log("check out the list of highscores...")
-console.table(scoreboard);
+console.table(scoreBoard);
