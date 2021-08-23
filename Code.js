@@ -45,6 +45,9 @@ var questions =[{
 },{
   ques: "My favorite superhero?",
   ans: "Superman",
+},{
+  ques: "My favorite car?",
+  ans: "Lamborghini",
 }];
 
 for(var i=0; i<questions.length; i++)
